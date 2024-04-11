@@ -363,7 +363,7 @@ For more information see the [javac documentation].
 Add the following to your project's `pom.xml` to configure the PojoBuilder annotation processor.
 
 	<dependency>
-		<groupId>net.karneim</groupId>
+		<groupId>io.github.rpost</groupId>
 		<artifactId>pojobuilder</artifactId>
 		<version>4.3.0</version>
 		<!-- 'provided' scope because this is only needed during compilation -->
@@ -387,7 +387,7 @@ repositories {
 }
 
 dependencies {
-  compile 'net.karneim:pojobuilder:4.3.0'
+  compile 'io.github.rpost:pojobuilder:4.3.0'
 }
 ```
 Please note that this not only adds the PojoBuilder and its dependencies to your compile-time class path but also to your run-time class path.
@@ -405,8 +405,8 @@ configurations {
 }
 
 dependencies {
-  codeGeneration 'net.karneim:pojobuilder:4.3.0'
-  compileOnly 'net.karneim:pojobuilder:4.3.0:annotations'
+  codeGeneration 'io.github.rpost:pojobuilder:4.3.0'
+  compileOnly 'io.github.rpost:pojobuilder:4.3.0:annotations'
 }
 compileJava.classpath += configurations.codeGeneration
 compileTestJava.classpath += configurations.codeGeneration
@@ -430,7 +430,7 @@ To make pojobuilder work again, replace the used dependency scope with `annotati
 
 ```groovy
 dependencies {
-  annotationProcessor 'net.karneim:pojobuilder:4.3.0'
+  annotationProcessor 'io.github.rpost:pojobuilder:4.3.0'
 }
 ```
 
